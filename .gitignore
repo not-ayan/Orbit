@@ -88,16 +88,12 @@ ORBIt.zip
 *.bin
 
 # ==========================================
-# Agent Prompt Packs, AI Meta & Audit Logs
+# Agent Prompt Packs & Skills Metadata
 # ==========================================
 /ORBIT_Agent_Execution_Pack/
 /ORBIT_Second_Repair_Pack/
 /ORBIT_AI_Knowledge_Base/
 /.agents/
 skills-lock.json
-/ORBIT_AUDIT_BASELINE.md
-/ORBIT_REPAIR_PHASE_2_AUDIT.md
-/CHANGELOG_ORBIT_REPAIR.md
-/CHANGELOG_ORBIT_REPAIR_PHASE_2.md
 *.log
 logs/
