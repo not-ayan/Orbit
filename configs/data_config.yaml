@@ -1,0 +1,21 @@
+# Data Pipeline Configuration for ORBIT
+
+common:
+  window_size: 128
+  stride_train: 32
+  stride_test: 32
+  val_ratio: 0.2
+  scale_method: "standard"
+  drop_constants: true
+  label_policy: "any"
+  batch_size: 64
+  output_dir: "data/processed"
+
+wadi_a2:
+  data_dir: "datasets/WaDi.A2_19 Nov 2019/WADI.A2_19 Nov 2019"
+  sampling_rate_hz: 1.0
+
+swat_a8:
+  data_dir: "datasets/SWaT.A8_June 2021/For Mark"
+  sampling_rate_hz: 1.0
+

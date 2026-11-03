@@ -1,0 +1,40 @@
+# ORBIT Few-Shot Adaptation & Transfer Experiment Configuration
+
+experiment:
+  source_dataset: "wadi"
+  target_dataset: "swat"
+  seeds: [42, 43, 44]
+  budgets: [0.0, 1.0, 5.0, 10.0, 100.0]
+
+budget_protocol:
+  name: "strict_inclusive"  # strict_inclusive | source_validated
+  train_ratio: 0.70
+  val_ratio: 0.15
+
+architecture:
+  d_model: 64
+  nhead: 4
+  num_layers: 3
+  dim_feedforward: 256
+  d_adapter: 16
+  dropout: 0.1
+
+training:
+  epochs: 6
+  batch_size: 32
+  lr: 0.001
+  patience: 3
+
+evaluation:
+  window_size: 128
+  stride_train: 32
+  stride_test: 32
+  aggregation: "mean"
+  matching_rule: "overlap"
+  threshold_method: "percentile"
+  percentile: 99.0
+
+paths:
+  backbone_checkpoint: "results/pretraining/wadi/pretrained_backbone.pt"
+  output_root: "results/transfer_experiments"
+
